@@ -23,8 +23,8 @@
     self.title = @"建文";
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
 
-    self.meStr = @"hdjkashdkasjhdkasjhdkjashdjbvmnxbvnmdkhasiudhasjkdhjkashdjkashdkasjhdkasjhdkjashdjbvmnxbvnmdkhasiudhasjkdhjkas";
-    self.youStr = @"hdjkashdkasjhdkasjhdkjashdjbvmnxbvnmdkhasiudhasjkdhjkashdjkashdkasjhdkasjhdkjashdjbvmnxbvnmdkhasiudhasjkdhjkashdjkashdkasjhdkasjhdkjashdjbvmnxbvnmdkhasiudhasjkdhjkashdjkashdkasjhdkasjhdkjashdjbvmnxbvnmdkhasiudhasjkdhjkas";
+    self.meStr = @"jsdakljdklasjdklsajdkljsalkdjklsajdklasjdlkasjdkljaslkdjalskjdklasjdkljsakldjklasjdjsdakljdklasjdklsajdkljsalkdjklsajdklasjdlkasjdkljaslkdjalskjdklasjdkljsakldjklasjd";
+    self.youStr = @"jsdakljdklasjdklsajdkljsalkdjklsajdklasjdlkasjdkljaslkdjalskjdklasjdkljsakldjklasjd";
 }
 
 
@@ -40,6 +40,7 @@
         }
         cell.chatString = self.youStr;
         cell.date = [NSDate date];
+        cell.userImageView.image = [UIImage imageNamed:@"image9.jpg"];
         return cell;
     }else{
         static NSString *cellOneString = @"chatTow";
@@ -49,6 +50,7 @@
         }
         cell.chatString = self.meStr;
         cell.date = [NSDate date];
+        cell.userImageView.image = [UIImage imageNamed:@"image7.jpg"];
         return cell;
     }
 }

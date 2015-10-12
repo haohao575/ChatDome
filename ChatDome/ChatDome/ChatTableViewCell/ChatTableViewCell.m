@@ -32,7 +32,8 @@
 }
 - (void)addviewMe
 {
-    
+    self.userImageView = [[UIImageView alloc]init];
+    [self.contentView addSubview:self.userImageView];
     self.returnView = [[UIView alloc] initWithFrame:CGRectZero];
 	self.returnView.backgroundColor = [UIColor clearColor];
 	self.lableDate = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 9)];
@@ -55,10 +56,15 @@
 	self.lable.lineBreakMode = NSLineBreakByWordWrapping;
 	self.chatImageView.frame = CGRectMake(0.0f, 10.0f, [UIScreen mainScreen].bounds.size.width / 2.0, 0);
     if (self.StyleInt == t_MeCell) {
-        self.returnView.frame = CGRectMake([UIScreen mainScreen].bounds.size.width / 2.0, 0.0f, [UIScreen mainScreen].bounds.size.width / 2.0, 0);
+        self.returnView.frame = CGRectMake([UIScreen mainScreen].bounds.size.width / 2.0 - 40, 0.0f, [UIScreen mainScreen].bounds.size.width / 2.0, 0);
+        self.userImageView.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 39, 0, 38, 38);
     }else{
-        self.returnView.frame = CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].bounds.size.width / 2.0, 0);
+        self.returnView.frame = CGRectMake(40.0f, 0.0f, [UIScreen mainScreen].bounds.size.width / 2.0, 0);
+        self.userImageView.frame = CGRectMake(1, 0, 38, 38);
     }
+    self.userImageView.layer.masksToBounds = YES;
+    
+    self.userImageView.layer.cornerRadius = 38 / 2;
 	[self.returnView addSubview:self.chatImageView];
 	[self.chatImageView addSubview:self.lable];
     [self.contentView addSubview:self.lableDate];
@@ -77,11 +83,13 @@
     self.lable.frame = CGRectMake(self.lable.frame.origin.x,self.lable.frame.origin.y, rect.size.width + 5, rect.size.height + 5);
     if (self.StyleInt == t_MeCell) {
         self.chatImageView.frame = CGRectMake([UIScreen mainScreen].bounds.size.width / 2.0 - rect.size.width - 33.0f,self.chatImageView.frame.origin.y, rect.size.width + 33.0f, rect.size.height + 30.0f);
+        self.returnView.frame = CGRectMake(self.returnView.frame.origin.x,self.returnView.frame.origin.y, rect.size.width + 33.0f, rect.size.height + 45.f);
     }else{
          self.chatImageView.frame = CGRectMake(self.chatImageView.frame.origin.x,self.chatImageView.frame.origin.y, rect.size.width + 33.0f, rect.size.height + 30.0f);
+        self.returnView.frame = CGRectMake(self.returnView.frame.origin.x,self.returnView.frame.origin.y, rect.size.width + 33.0f, rect.size.height + 45.f);
     }
+    self.userImageView.frame = CGRectMake(self.userImageView.frame.origin.x, rect.size.height, self.userImageView.frame.size.width, self.userImageView.frame.size.height);
     
-    self.returnView.frame = CGRectMake(self.returnView.frame.origin.x,self.returnView.frame.origin.y, rect.size.width + 33.0f, rect.size.height + 45.f);
 }
 - (void)setDate:(NSDate *)date{
     NSDateFormatter *formater = [[NSDateFormatter alloc] init];

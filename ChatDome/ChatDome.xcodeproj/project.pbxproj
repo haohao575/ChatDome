@@ -20,6 +20,8 @@
 		72BD44071BCB964B00E429C1 /* bubble-default-incoming-green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72BD44021BCB964B00E429C1 /* bubble-default-incoming-green@2x.png */; settings = {ASSET_TAGS = (); }; };
 		72BD44081BCB964B00E429C1 /* bubble-default-outgoing-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 72BD44031BCB964B00E429C1 /* bubble-default-outgoing-selected.png */; settings = {ASSET_TAGS = (); }; };
 		72BD44091BCB964B00E429C1 /* bubble-default-outgoing-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72BD44041BCB964B00E429C1 /* bubble-default-outgoing-selected@2x.png */; settings = {ASSET_TAGS = (); }; };
+		72BD440B1BCBDC8900E429C1 /* image9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72BD440A1BCBDC8900E429C1 /* image9.jpg */; settings = {ASSET_TAGS = (); }; };
+		72BD440D1BCBDC8F00E429C1 /* image7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72BD440C1BCBDC8F00E429C1 /* image7.jpg */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		72BD44021BCB964B00E429C1 /* bubble-default-incoming-green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble-default-incoming-green@2x.png"; sourceTree = "<group>"; };
 		72BD44031BCB964B00E429C1 /* bubble-default-outgoing-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble-default-outgoing-selected.png"; sourceTree = "<group>"; };
 		72BD44041BCB964B00E429C1 /* bubble-default-outgoing-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble-default-outgoing-selected@2x.png"; sourceTree = "<group>"; };
+		72BD440A1BCBDC8900E429C1 /* image9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image9.jpg; sourceTree = "<group>"; };
+		72BD440C1BCBDC8F00E429C1 /* image7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image7.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 				72288FB71BC7AAE800B5A878 /* AppDelegate.m */,
 				72288FF81BC7ABDA00B5A878 /* ChatTableVC.h */,
 				72288FF91BC7ABDA00B5A878 /* ChatTableVC.m */,
+				72BD440A1BCBDC8900E429C1 /* image9.jpg */,
+				72BD440C1BCBDC8F00E429C1 /* image7.jpg */,
 				72288FBC1BC7AAE800B5A878 /* Main.storyboard */,
 				72288FBF1BC7AAE800B5A878 /* Assets.xcassets */,
 				72288FC11BC7AAE800B5A878 /* LaunchScreen.storyboard */,
@@ -278,9 +284,11 @@
 			files = (
 				72BD44071BCB964B00E429C1 /* bubble-default-incoming-green@2x.png in Resources */,
 				72288FC31BC7AAE800B5A878 /* LaunchScreen.storyboard in Resources */,
+				72BD440D1BCBDC8F00E429C1 /* image7.jpg in Resources */,
 				72BD44091BCB964B00E429C1 /* bubble-default-outgoing-selected@2x.png in Resources */,
 				72BD44081BCB964B00E429C1 /* bubble-default-outgoing-selected.png in Resources */,
 				72288FC01BC7AAE800B5A878 /* Assets.xcassets in Resources */,
+				72BD440B1BCBDC8900E429C1 /* image9.jpg in Resources */,
 				72288FBE1BC7AAE800B5A878 /* Main.storyboard in Resources */,
 				72BD44061BCB964B00E429C1 /* bubble-default-incoming-green.png in Resources */,
 			);
