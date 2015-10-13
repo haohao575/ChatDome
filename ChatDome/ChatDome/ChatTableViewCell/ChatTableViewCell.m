@@ -48,7 +48,7 @@
     //最重要的方法
 	self.chatImageView = [[UIImageView alloc] initWithImage:[bubble stretchableImageWithLeftCapWidth:t_ShitImageWidth topCapHeight:t_ShitImageHeight]];
 	UIFont *font = [UIFont systemFontOfSize:13];
-	self.lable = [[UILabel alloc] initWithFrame:CGRectMake(17.0f, 14.0f, 0, 0)];
+	self.lable = [[UILabel alloc] initWithFrame:CGRectMake(13.0f, 14.0f, 0, 0)];
 	self.lable.backgroundColor = [UIColor clearColor];
     
 	self.lable.font = font;

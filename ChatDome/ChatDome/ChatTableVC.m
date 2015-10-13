@@ -27,16 +27,17 @@
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     self.chatArray = [NSMutableArray array];
     self.dateArray = [NSMutableArray array];
-    for (int i = 0; i < 30; i++) {
-        NSString *str = @"大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈第三大uwqieoiuodhjkshdqwujkdshasjkdhqowihd多久啊时刻记得多久啊开始登记卡上的金卡是的哦气温降低开始正常只能，没打算呢打你卡上你的卡大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈第三大uwqieoiuodhjkshdqwujkdshasjkdhqowihd多久啊时刻记得多久啊开始登记卡上的金卡是的哦气温降低开始正常只能，没打算呢打你卡上你的卡";
+    for (int i = 0; i < 29; i++) {
+        NSString *str = @"  建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈第三大uwqieoiuodhjkshdqwujkdshasjkdhqowihd多久啊时刻记得多久啊开始登记卡上的金卡是的哦气温降低开始正常只能，没打算呢打你卡上你的卡";
         NSInteger s = arc4random() % (str.length - 1) + 1;
         NSString *string = [str substringToIndex:s];
         [self.chatArray addObject:string];
         NSDate *date = [NSDate date];
         [self.dateArray addObject:date];
     }
-    
-    
+    [self.chatArray addObject:@""];
+    NSDate *date = [NSDate date];
+    [self.dateArray addObject:date];
     
     
 }
