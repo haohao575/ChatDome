@@ -23,8 +23,8 @@
     self.title = @"建文";
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
 
-    self.meStr = @"jsdakljdklasjdklsajdkljsalkdjklsajdklasjdlkasjdkljaslkdjalskjdklasjdkljsakldjklasjdjsdakljdklasjdklsajdkljsalkdjklsajdklasjdlkasjdkljaslkdjalskjdklasjdkljsakldjklasjd";
-    self.youStr = @"jsdakljdklasjdklsajdkljsalkdjklsajdklasjdlkasjdkljaslkdjalskjdklasjdkljsakldjklasjd";
+    self.meStr = @"第三大uwqieoiuodhjkshdqwujkdshasjkdhqowihd多久啊时刻记得多久啊开始登记卡上的金卡是的哦气温降低开始正常只能，没打算呢打你卡上你的卡";
+    self.youStr = @"大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈";
 }
 
 

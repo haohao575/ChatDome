@@ -100,10 +100,12 @@
 }
 - (CGRect)addCapitalLettersString:(NSString *)str{
     CGRect rect = [str boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width / 2.0, 5000.0f) options:NSStringDrawingUsesLineFragmentOrigin attributes:[NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:13.] forKey:NSFontAttributeName] context:nil];
+    NSLog(@"%lf",[ChatTableViewCell addChatTableViewCellHeightString:self.chatString]);
     return rect;
 }
 + (CGFloat)addChatTableViewCellHeightString:(NSString *)str{
     CGRect rect = [str boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width / 2.0, 5000.0f) options:NSStringDrawingUsesLineFragmentOrigin attributes:[NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:13.] forKey:NSFontAttributeName] context:nil];
+
     return rect.size.height + 45.0f;
 }
 
