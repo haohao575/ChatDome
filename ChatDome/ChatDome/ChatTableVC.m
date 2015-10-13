@@ -15,6 +15,9 @@
 
 @property (nonatomic,copy)NSString *youStr;
 
+@property (nonatomic,strong)NSMutableArray *chatArray;
+@property (nonatomic,strong)NSMutableArray *dateArray;
+
 @end
 
 @implementation ChatTableVC
@@ -22,14 +25,25 @@
 - (void)viewDidLoad{
     self.title = @"建文";
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
-
-    self.meStr = @"第三大uwqieoiuodhjkshdqwujkdshasjkdhqowihd多久啊时刻记得多久啊开始登记卡上的金卡是的哦气温降低开始正常只能，没打算呢打你卡上你的卡";
-    self.youStr = @"大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈";
+    self.chatArray = [NSMutableArray array];
+    self.dateArray = [NSMutableArray array];
+    for (int i = 0; i < 30; i++) {
+        NSString *str = @"大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈第三大uwqieoiuodhjkshdqwujkdshasjkdhqowihd多久啊时刻记得多久啊开始登记卡上的金卡是的哦气温降低开始正常只能，没打算呢打你卡上你的卡大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈大家哈市了到了卡上的哈建设的借口哈速度加快哈萨克记得哈第三大uwqieoiuodhjkshdqwujkdshasjkdhqowihd多久啊时刻记得多久啊开始登记卡上的金卡是的哦气温降低开始正常只能，没打算呢打你卡上你的卡";
+        NSInteger s = arc4random() % (str.length - 1) + 1;
+        NSString *string = [str substringToIndex:s];
+        [self.chatArray addObject:string];
+        NSDate *date = [NSDate date];
+        [self.dateArray addObject:date];
+    }
+    
+    
+    
+    
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return self.chatArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row % 2 == 0) {
@@ -38,8 +52,8 @@
         if (!cell) {
             cell = [[ChatTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellString StyleInt:t_YouCell];
         }
-        cell.chatString = self.youStr;
-        cell.date = [NSDate date];
+        cell.chatString = self.chatArray[indexPath.row];
+        cell.date = self.dateArray[indexPath.row];
         cell.userImageView.image = [UIImage imageNamed:@"image9.jpg"];
         return cell;
     }else{
@@ -48,20 +62,17 @@
         if (!cell) {
             cell = [[ChatTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellOneString StyleInt:t_MeCell];
         }
-        cell.chatString = self.meStr;
-        cell.date = [NSDate date];
+        cell.chatString = self.chatArray[indexPath.row];
+        cell.date = self.dateArray[indexPath.row];
         cell.userImageView.image = [UIImage imageNamed:@"image7.jpg"];
         return cell;
     }
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.row % 2 == 0) {
-        return [ChatTableViewCell addChatTableViewCellHeightString:self.youStr];
-    }
-    
-    return  [ChatTableViewCell addChatTableViewCellHeightString:self.meStr];
+    return  [ChatTableViewCell addChatTableViewCellHeightString:self.chatArray[indexPath.row]] + 10;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
